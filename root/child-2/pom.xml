@@ -5,11 +5,20 @@
     
     <parent>
         <groupId>com.mycompany</groupId>
-        <artifactId>root</artifactId>
+        <artifactId>parent-foo</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../parent-foo</relativePath>
     </parent>
     
     <artifactId>child-2</artifactId>
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
+    
+    <dependencies>
+        <!-- Dependency to Java EE API. Version is defined in parent-* and can depend from parent to parent -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+        </dependency>
+    </dependencies>
     
 </project>

@@ -10,7 +10,21 @@
     
     <modules>
         <module>parent-foo</module>
-        <module>parent-bar</module>
+        <!--<module>parent-bar</module>-->
     </modules>
+    
+    <properties>
+        <!-- maven default properties -->
+        <encoding>UTF-8</encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+        <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        
+        <!-- the following properties are defined in the corresponding parent-*
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        -->
+    </properties>
     
 </project>
